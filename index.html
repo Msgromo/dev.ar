@@ -1,55 +1,90 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manuel Sgromo</title>
-    
+
     <style>
+        body {
+            margin: 0;
+            background-image: url('background.png');
+            background-color: #333;
+        }
+
         .portfolio {
-            font-family: Arial, sans-serif;
+            font-family: 'Confortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            color: #000000;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            background: linear-gradient(135deg, #b9b9b9, #0096cc38, #61616138);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
         header {
             text-align: center;
             margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
+            font-size: 3rem;
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #0096cc;
         }
 
         nav {
             display: flex;
             justify-content: center;
             margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 50px;
         }
 
         nav a {
             margin: 0 1rem;
             text-decoration: none;
-            color: #3498db;
+            color: #000000;
             font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #0096cc;
+            transform: scale(1.1);
         }
 
         section {
             margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            /* transform: translateY(-5px); */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
+            color: #0096cc;
+            border-bottom: 2px solid #0096cc;
             padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         ul {
@@ -59,113 +94,167 @@
 
         li {
             margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
         .project {
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
             margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
 
         .project h3 {
             margin-top: 0;
-            color: #3498db;
+            color: #0096cc;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 2rem;
         }
 
         .contact-links a {
-            color: #3498db;
-            font-size: 1.5rem;
+            color: #000000;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: #0096cc;
+            transform: scale(1.2);
         }
 
         footer {
             text-align: center;
             margin-top: 2rem;
             font-size: 0.9rem;
-            color: #7f8c8d;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div className="portfolio">
+
+    <div class="portfolio">
         <header>
             <h1>Manuel Sgromo</h1>
             <p>Fullstack Developer | Backend Specialist</p>
         </header>
 
         <nav>
-            <a href="#about">About</a>
+            <a href="#about">Acerca de mi</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
         </nav>
 
         <main>
             <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    Hello! I'm Manuel Sgromo, a passionate fullstack developer with a strong focus on backend
-                    technologies.
-                    I love solving complex problems and building robust, scalable systems.
-                </p>
+                <h2>Acerca de mi</h2>
+                <p> ¡Hola! Soy Manuel Sgromo, un desarrollador fullstack apasionado con un fuerte enfoque en tecnologías
+                    backend. </p>
+                <p> Me encanta resolver problemas complejos y construir sistemas robustos y escalables. </p>
             </section>
 
             <section id="skills">
                 <h2>Skills</h2>
                 <ul>
-                    <li>Backend: Node.js, Express, Python, Django, SQL, NoSQL</li>
+                    <li>Backend: .NET, SQL, PHP, C#, C++</li>
                     <li>Frontend: HTML, CSS, JavaScript, React</li>
-                    <li>DevOps: Docker, Kubernetes, CI/CD</li>
-                    <li>Cloud: AWS, Google Cloud Platform</li>
+                    <li>DevOps: Docker, CI/CD</li>
                     <li>Version Control: Git, GitHub</li>
                 </ul>
             </section>
 
             <section id="projects">
-                <h2>Featured Projects</h2>
-                <div className="project">
-                    <h3>E-commerce Platform</h3>
-                    <p>A scalable backend for a high-traffic e-commerce site using Node.js and MongoDB.</p>
+                <h2>Proyectos Destacados</h2>
+                <div class="project">
+                    <h3>Sistema de Historias Clínicas</h3>
+                    <p>Desarrollé un sistema para la gestión de historias clínicas dentro de una aplicación de turnos
+                        médicos, asegurando un flujo eficiente de la información de pacientes.</p>
                 </div>
-                <div className="project">
-                    <h3>Data Analytics Dashboard</h3>
-                    <p>Full-stack application with React frontend and Python backend for real-time data visualization.
-                    </p>
+                <div class="project">
+                    <h3>Odontograma</h3>
+                    <p>Realicé el desarrollo de un odontograma visual que permite un seguimiento detallado de los
+                        procedimientos odontológicos de los pacientes.</p>
                 </div>
-                <div className="project">
-                    <h3>Microservices Architecture</h3>
-                    <p>Designed and implemented a microservices-based system using Docker and Kubernetes.</p>
+                <div class="project">
+                    <h3>API de Servicios de Salud</h3>
+                    <p>Implementé una API que ofrece servicios de salud, facilitando la integración de diferentes
+                        sistemas para la consulta de información médica y gestión de turnos.</p>
+                </div>
+                <div class="project">
+                    <h3>Formularios de Habilitaciones Comerciales</h3>
+                    <p>Desarrollé formularios para la habilitación de comercios, simplificando el proceso administrativo
+                        para la apertura de nuevos establecimientos.</p>
                 </div>
             </section>
 
             <section id="contact">
-                <h2>Get in Touch</h2>
-                <div className="contact-links">
+                <h2>Mantengamos el contacto</h2>
+                <div class="contact-links">
                     <a href="https://github.com/manuelsgromo" aria-label="GitHub">
-                        <Github />
+                        <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32"
+                            data-view-component="true"
+                            class="octicon octicon-mark-github v-align-middle color-fg-default">
+                            <path
+                                d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z">
+                            </path>
+                        </svg>
                     </a>
                     <a href="https://linkedin.com/in/manuelsgromo" aria-label="LinkedIn">
-                        <Linkedin />
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z">
+                            </path>
+                        </svg>
                     </a>
-                    <a href="mailto:manuel.sgromo@example.com" aria-label="Email">
-                        <Mail />
+                    <a href="mailto:mansgromo@gmail.com" aria-label="Email">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke="#000000"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="3" y="5" width="18" height="14" rx="2" stroke="#000000" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
                     </a>
                 </div>
             </section>
         </main>
-
-        <footer>
-            <p>&copy; 2024 Manuel Sgromo. All rights reserved.</p>
-        </footer>
     </div>
-
 </body>
 
 </html>
